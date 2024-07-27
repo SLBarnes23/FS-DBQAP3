@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form action="/<%= item.id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= item.name %>" required>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="<%= item.description %>" required>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to List</a>
+</body>
+</html>
